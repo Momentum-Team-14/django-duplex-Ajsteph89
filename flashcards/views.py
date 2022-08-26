@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-from flashcards.models import Flashcard
+from flashcards.models import Flashcard, Subject
 
 # Create your views here.
-def card_list(request):
-    cards = Flashcard.objects.all()
-    return render(request, 'flashcards/card_list.html', {"cards": cards})
+
+def list_subject(request):
+    subjects = Subject.objects.all()
+    return render(request, 'flashcards/list_subject.html', {"subjects": subjects})

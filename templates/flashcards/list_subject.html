@@ -1,0 +1,7 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+    {% for subject in subjects %}
+            <div>{{ subject.subject }}</div>
+    {% endfor %}
+{% endblock %}

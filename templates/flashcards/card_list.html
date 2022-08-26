@@ -1,9 +1,0 @@
-{% extends 'flashcards/base.html' %}
-
-{% block content %}
-    {% for card in flashcards %}
-        <article>
-            <a href="{% url 'card_list' pk=card.pk %}">{{ flashcard }}</a>
-        </article>
-    {% endfor %}
-{% endblock %}
