@@ -1,6 +1,9 @@
 {% extends 'flashcards/base.html' %}
 
 {% block content %}
+    <div>IM THE LIST OF SUBJECTS HTML</div>
+    <div>Please select a subject or click "New" to start a new group of flashcards.</div>
+    <a href="{% url 'subject_new' %}">Add New</a>
     {% for subject in subjects %}
             <div>{{ subject.subject }}</div>
     {% endfor %}
