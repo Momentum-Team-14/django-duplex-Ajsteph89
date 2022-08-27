@@ -5,6 +5,9 @@
     <a href="{% url 'subject_new' %}">Add New Subject</a>
     <div>Current Subjects</div>
     {% for subject in subjects %}
-        <a href="{% url 'questions' %}" >{{ subject.subject }}</a> 
+        <div>
+        <a href="{% url 'questions' %}" >{{ subject.subject }}</a>
+            <a href="{% url 'delete_subject' pk=subject.pk %}">Delete Subject</a> 
+        </div>
     {% endfor %}
 {% endblock %}

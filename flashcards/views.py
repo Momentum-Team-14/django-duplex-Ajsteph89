@@ -16,11 +16,18 @@ def subject_new(request):
         if form.is_valid():
             subject = form.save(commit=False)
             subject.save()
-            return redirect('flashcards/list_subject.html')
+            return redirect('list_subject')
     else:
         form = SubjectForm()
     return render(request, 'flashcards/subject_new.html', {'form': form})
 
+
+
 def questions(request):
     questions = Flashcard.question
     return render(request, "flashcards/questions.html", {'questions': questions})
+
+def delete_subject(request, pk):
+    subject = get_object_or_404(Subject, pk=pk)
+    subject.delete()
+    return redirect('list_subject')
