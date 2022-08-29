@@ -4,13 +4,13 @@
 {% block content %}
     
     <div>View your flashcards below or add a new flashcard.</div>
-        <a href="{% url 'card_new' pk=subject.pk %}">Add New Flashcard</a>
+        <a href="{% url 'card_new' pk=subject.pk %}">Add New</a>
 
     <div>Question List</div>
         {% for card in flashcards %}
             <div>
                 {{ card.question }} {{ card.answer }}
-                <a href="{% url 'delete_card' pk=card.pk %}">Delete Subject</a>
+                <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
             </div>
         {% endfor %}
         

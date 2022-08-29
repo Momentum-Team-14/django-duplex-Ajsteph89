@@ -51,7 +51,8 @@ def card_new(request, pk=None):
     return render(request, 'flashcards/card_new.html', {'card_form': card_form})
 
 
-def delete_card(request, pk):
-    card = get_object_or_404(Flashcard, pk=pk)
+def delete_card(request, pk1, pk2):
+    card = get_object_or_404(Flashcard, pk=pk1)
     card.delete()
-    return redirect('list_subject')
+    subject = get_object_or_404(Subject, pk=pk2)
+    return redirect('card_questions', pk=pk2)
