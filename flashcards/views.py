@@ -23,9 +23,11 @@ def subject_new(request):
 
 
 
-def questions(request):
-    questions = Flashcard.question
-    return render(request, "flashcards/questions.html", {'questions': questions})
+def card_questions(request, pk):
+    subject = get_object_or_404(Subject, pk=pk)
+    flashcards = subject.flashcards.all()
+    return render(request, "flashcards/card_questions.html", {'flashcards': flashcards})
+
 
 def delete_subject(request, pk):
     subject = get_object_or_404(Subject, pk=pk)

@@ -6,7 +6,7 @@
     <div>Current Subjects</div>
     {% for subject in subjects %}
         <div>
-        <a href="{% url 'questions' %}" >{{ subject.subject }}</a>
+        <a href="{% url 'card_questions' pk=subject.pk %}" >{{ subject.subject }}</a>
             <a href="{% url 'delete_subject' pk=subject.pk %}">Delete Subject</a> 
         </div>
     {% endfor %}
