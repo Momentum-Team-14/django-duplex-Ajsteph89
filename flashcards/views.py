@@ -43,8 +43,15 @@ def card_new(request, pk=None):
         if card_form.is_valid():
             card = card_form.save(commit=False)
             card.subject = subject
+            card.user = request.user
             card.save()
             return redirect('card_questions', pk=pk)
     else:
         card_form = FlashcardForm()
     return render(request, 'flashcards/card_new.html', {'card_form': card_form})
+
+
+def delete_card(request, pk):
+    card = get_object_or_404(Flashcard, pk=pk)
+    card.delete()
+    return redirect('list_subject')

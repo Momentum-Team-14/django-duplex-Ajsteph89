@@ -9,4 +9,4 @@ class SubjectForm(forms.ModelForm):
 class FlashcardForm(forms.ModelForm):
     class Meta:
         model = Flashcard
-        fields = ('question', 'answer', 'user',)
+        fields = ('question', 'answer',)

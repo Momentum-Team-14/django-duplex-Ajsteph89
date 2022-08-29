@@ -7,8 +7,11 @@
         <a href="{% url 'card_new' pk=subject.pk %}">Add New Flashcard</a>
 
     <div>Question List</div>
-        {% for card in flashcards.all %}
-            <div>{{ card.question }} {{ card.answer }}</div>
+        {% for card in flashcards %}
+            <div>
+                {{ card.question }} {{ card.answer }}
+                <a href="{% url 'delete_card' pk=card.pk %}">Delete Subject</a>
+            </div>
         {% endfor %}
         
         
