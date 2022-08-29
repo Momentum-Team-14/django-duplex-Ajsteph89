@@ -3,9 +3,16 @@
 
 {% block content %}
     
-    <div>Question List</div>
+    <div>View your flashcards below or add a new flashcard.</div>
+        <a href="{% url 'card_new' pk=subject.pk %}">Add New Flashcard</a>
 
-    <div>{{ flashcards }}</div>
+    <div>Question List</div>
+        {% for card in flashcards.all %}
+            <div>{{ card.question }} {{ card.answer }}</div>
+        {% endfor %}
+        
+        
+
 
 
 {% endblock %}
