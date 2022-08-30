@@ -1,17 +1,14 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
-    
-    <div>View your flashcards below or add a new flashcard.</div>
-        <a href="{% url 'card_new' pk=subject.pk %}">Add New</a>
-
-    <div>Question List</div>
+    <div>Answer</div>
         {% for card in flashcards %}
             <div>
+                <div>{{ card.question }}</div> 
+                <div>{{ card.answer }}</div>
+                <button href="{% url 'card_answer' pk1=card.pk pk2=subject.pk %}">Answer</button>"
                 <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
                 <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
-                {{ card.question }} {{ card.answer }}
 
             </div>
         {% endfor %}
@@ -21,4 +18,3 @@
 
 
 {% endblock %}
-
