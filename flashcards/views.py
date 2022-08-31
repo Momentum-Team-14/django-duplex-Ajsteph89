@@ -4,6 +4,7 @@ import flashcards
 from flashcards.models import Flashcard, Subject
 from .forms import SubjectForm, FlashcardForm
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -84,3 +85,9 @@ def delete_card(request, pk1, pk2):
     card.delete()
     subject = get_object_or_404(Subject, pk=pk2)
     return redirect('card_questions', pk=pk2)
+
+
+@login_required
+def index(request):
+    entries = Subject.objects.filter(created_by=request.user)
+    return render(request, 'flaschcards/list_subject.html', { 'entries': entries })
