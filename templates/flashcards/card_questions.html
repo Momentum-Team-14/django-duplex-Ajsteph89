@@ -11,7 +11,7 @@
             <div>
                     <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
                     <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
-                    <div>{{ card.question }}</div>
+                    {{ card.question }}
                     <a href="{% url 'card_answer' pk1=card.pk %}">Answer</a>
             </div>
         {% endfor %}
