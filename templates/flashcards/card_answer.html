@@ -2,19 +2,6 @@
 
 {% block content %}
     <div>Answer</div>
-        {% for card in flashcards %}
-            <div>
-                <div>{{ card.question }}</div> 
-                <div>{{ card.answer }}</div>
-                <button href="{% url 'card_answer' pk1=card.pk pk2=subject.pk %}">Answer</button>"
-                <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
-                <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
-
-            </div>
-        {% endfor %}
-        
-        
-
-
-
+            {{ card.question }} {{ card.answer }}
 {% endblock %}
+

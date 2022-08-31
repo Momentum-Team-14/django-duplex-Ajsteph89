@@ -9,10 +9,10 @@
     <div>Question List</div>
         {% for card in flashcards %}
             <div>
-                <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
-                <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
-                {{ card.question }} {{ card.answer }}
-
+                    <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
+                    <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
+                    <div>{{ card.question }}</div>
+                    <a href="{% url 'card_answer' pk1=card.pk %}">Answer</a>
             </div>
         {% endfor %}
         

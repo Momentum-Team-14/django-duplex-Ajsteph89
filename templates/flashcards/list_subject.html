@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if user.is_authenticated %}
         <div>Please select a subject or click "New" to start a new group of flashcards.</div>
         <a href="{% url 'subject_new' %}">Add New Subject</a>
         <div>Current Subjects</div>
@@ -12,5 +11,4 @@
                 <a href="{% url 'subject_edit' pk=subject.pk %}">Edit</a>
                 </div>
             {% endfor %}
-    {% endif %}
 {% endblock %}
