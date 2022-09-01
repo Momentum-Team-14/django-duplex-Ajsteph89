@@ -9,12 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <header>FLASHCARDS</header>
+    <header>AJ's Study Time with Flashcards</header>
     <div class="controls">
-        <a href="{% url 'list_subject' %}">Home</a>
+        <a href="{% url 'list_subject' %}">Home/Login</a>
         <a href="/accounts/logout">Log Out</a>
-    </div>    
-    {% block content %}
-    {% endblock %}
+    </div>  
+    <div class = 'block_content'>
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

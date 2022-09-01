@@ -2,12 +2,12 @@
 
 
 {% block content %}
-    <div class="prompt">View your flashcards below or add a new flashcard.</div>
-    <h1>Question List</h1>
+    <div class="prompt">View your existing flashcards below or add new ones by selecting "Add New".</div>
+    <h1>Your {{subject}} Flashcards</h1>
     <div class="new_link">
         <a href="{% url 'card_new' pk=subject.pk %}">Add New</a>
     </div>
-    <div class='current_subjects'>
+    <div class='container'>
         {% for card in flashcards %}
             <div class='one_subject' >
                     <div class = 'subject'>{{ card.question }}</div>

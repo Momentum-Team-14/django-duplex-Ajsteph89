@@ -20,25 +20,25 @@ body {
     font-size: x-large;
 }
 
-.current_subjects {
+.container{
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
-
+    width: 100%;
+    justify-content: center;
 }
+
 .one_subject {
     padding: 1rem;
     text-align: center;
     border: 1px solid black;
     max-width: 25%;
     background-color: lightskyblue;
+    margin: 1rem;
 }
 
-
-
 h1 {
-    text-align: left;
-    padding-left: 1rem;
+    text-align: center;
+    padding-top: 1rem;
     font-size: x-large;
 }
 
@@ -62,3 +62,9 @@ h1 {
     padding-top: 2rem;
     padding-left: 1rem;
 }
+
+.block_content {
+    text-align: center;
+    align-items: center;
+}
+

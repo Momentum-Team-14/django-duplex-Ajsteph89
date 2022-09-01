@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <div class="prompt">Please select a subject to study or click "New" to start a new group of flashcards.</div>
+        <div class="prompt">Select a subject to study or select "Add New" to create a new group of flashcards.</div>
         <h1>Current Subjects</h1>
         <div class="new_link">
-            <a href="{% url 'subject_new' %}">Add New Subject</a>
+            <a href="{% url 'subject_new' %}">Add New</a>
         </div>
-            <div class="current_subjects">
+            <div class="container">
                 {% for subject in subjects %}
                     <div class = 'one_subject'>
                         <a class='subject' href="{% url 'card_questions' pk=subject.pk %}" >{{ subject.subject }}</a>
