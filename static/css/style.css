@@ -1,0 +1,64 @@
+header {
+    font-size: xx-large;
+    color:black;
+    text-align: center;
+    background-color: lightskyblue;
+    border: 1px solid black
+    ;
+}
+
+body {
+    background-color: rgb(185, 225, 185);
+}
+
+.controls {
+    padding: 1rem;
+    text-align: center;
+}
+
+.subject {
+    font-size: x-large;
+}
+
+.current_subjects {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+.one_subject {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    max-width: 25%;
+    background-color: lightskyblue;
+}
+
+
+
+h1 {
+    text-align: left;
+    padding-left: 1rem;
+    font-size: x-large;
+}
+
+.new_link {
+    padding: 1rem;
+}
+
+.prompt {
+    text-align: center;
+}
+
+.answer_link {
+    font-size: larger;
+}
+
+.edit_links {
+    font-size: small;
+}
+
+.back_button {
+    padding-top: 2rem;
+    padding-left: 1rem;
+}

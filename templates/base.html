@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <div>FLASHCARDS</div>
-    <a href="{% url 'list_subject' %}">Subjects</a>
-    <a href="/accounts/logout">Log Out</a>
-        {% block content %}
-        {% endblock %}
+    <header>FLASHCARDS</header>
+    <div class="controls">
+        <a href="{% url 'list_subject' %}">Home</a>
+        <a href="/accounts/logout">Log Out</a>
+    </div>    
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

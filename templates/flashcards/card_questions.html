@@ -2,23 +2,25 @@
 
 
 {% block content %}
-    
-    <div>View your flashcards below or add a new flashcard.</div>
+    <div class="prompt">View your flashcards below or add a new flashcard.</div>
+    <h1>Question List</h1>
+    <div class="new_link">
         <a href="{% url 'card_new' pk=subject.pk %}">Add New</a>
-
-    <div>Question List</div>
+    </div>
+    <div class='current_subjects'>
         {% for card in flashcards %}
-            <div>
-                    <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
-                    <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
-                    {{ card.question }}
-                    <a href="{% url 'card_answer' pk1=card.pk %}">Answer</a>
-            </div>
+            <div class='one_subject' >
+                    <div class = 'subject'>{{ card.question }}</div>
+                    <a class = 'answer_link' href="{% url 'card_answer' pk1=card.pk %}">Answer</a>
+                    <div class = 'edit_links'>
+                        <a href="{% url 'card_edit' pk1=card.pk pk2=subject.pk %}">Edit</a>
+                        <a href="{% url 'delete_card' pk1=card.pk pk2=subject.pk %}">Delete</a>
+                    </div>
+                </div>
         {% endfor %}
-        
-        
-
-
-
+    </div>
+    <div class = 'back_button'>
+    <a href="{% url 'list_subject' %}">Back</a>
+    </div>
 {% endblock %}
 

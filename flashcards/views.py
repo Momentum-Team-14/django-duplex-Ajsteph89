@@ -95,7 +95,7 @@ def delete_card(request, pk1, pk2):
     subject = get_object_or_404(Subject, pk=pk2)
     return redirect('card_questions', pk=pk2)
 
-
+@login_required
 def card_answer(request, pk1):
     card = get_object_or_404(Flashcard, pk=pk1)
     return render(request, 'flashcards/card_answer.html', {'card':card})

@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+        <div class = 'one_subject'>
             <div>Quesiton: {{ card.question }}</div>
-            <div>Answer: {{ card.answer }}</div>
+            <div class="subject">Answer: {{ card.answer }}</div>
+        </div>
+        <div class="back_button">
             <a href="{% url 'card_questions' pk=card.subject.pk %}">Back</a>
         </div>
 {% endblock %}
