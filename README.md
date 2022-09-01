@@ -1,4 +1,4 @@
-Flashcard Application
+## Flashcard Application
 
 This is a Django application designed to allow users to create decks of flashcards that they can use to study. 
 
@@ -7,12 +7,12 @@ This is a Django application designed to allow users to create decks of flashcar
 ## With this app you can:
 
 
--Users must register an account.
--Logged in users may:
-    -Create a subject to study.
-    -Create flashcards within that subject.
-        -The flashcard hides the given answer and allows the user to view it separately.
-    -Edit/Delete existing subjects or flashcards.
+Users must register an account.
+Logged in users may:
+    Create a subject to study.
+    Create flashcards within that subject.
+        The flashcard hides the given answer and allows the user to view it separately.
+    Edit/Delete existing subjects or flashcards.
 
 
 ## Demo
